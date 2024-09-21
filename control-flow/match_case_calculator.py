@@ -1,12 +1,12 @@
-def main():
+
     #Prompt for user Input
-    num1 = float(input("Enter the first number: "))
+num1 = int(input("Enter the first number: "))
     #Prompt user for second number
-    num2 = float(input("Enter the second number"))
-    operation = input("Choose the operation (+, -, *, /): ")
+num2 = int(input("Enter the second number: "))
+operation = input("Choose the operation (+, -, *, /): ")
 
     # Perform the Calculations using the match case
-    match operation:
+match operation:
 
         case '+':
 
@@ -42,5 +42,4 @@ def main():
 
             print("Invalid operation. Please choose +, -, *, or /.")
 
-if __name__ == "__main__":  
-    main()    
+   
