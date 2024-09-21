@@ -1,30 +1,45 @@
-from nis import match
-from unittest import result
-
-
 def main():
-    """Prompts user for input and performs calculations using match case."""
-    while True:
-        try:
-          num1 = float(input("Enter the first number: "))
-          num2 = float(input("Enter the first number: "))
-          operation = input("Choose the operation (+, -, *, /): ")
-          break # Exit loop if input is invalid
-        except ValueError:
-           print("Invalid input. Please enter numbers only.")
-    #Perform calculation using match case with lamdas dor brevity
-    result = match; operation:
-        case "+": # type: ignore
-    return num1 + num2
-        case "-": # type: ignore
-    return num1 - num2
-        case "*": # type: ignore
-    return num1 * num2
-    case "/":  # Type: ignore
-    return num1 / num2 if num2 != 0 else "Cannot divide be zero."
-    case _:   #Type: ignore
-    return "Invalid operation."
-#Print the result
-print(f"The result is {result}")
-if __name__ == "__main__":
-       main()
+    #Prompt for user Input
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number"))
+    operation = input("Choose the operation (+, -, *, /): ")
+
+    # Perform the Calculations using the match case
+    match operation:
+
+        case '+':
+
+            result = num1 + num2
+
+            print(f"The result is {result}.")
+
+        case '-':
+
+            result = num1 - num2
+
+            print(f"The result is {result}.")
+
+        case '*':
+
+            result = num1 * num2
+
+            print(f"The result is {result}.")
+        
+        case '/':
+
+            if num2 == 0:
+
+                print("Cannot divide by zero.")
+
+            else:
+
+                result = num1 / num2
+
+                print(f"The result is {result}.")
+
+        case _:
+
+            print("Invalid operation. Please choose +, -, *, or /.")
+
+if __name__ == "__main__":  
+    main()    
