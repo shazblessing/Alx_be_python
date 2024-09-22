@@ -2,7 +2,7 @@
 """Asks user for weather condition and provides clothing advice."""
 #Suggested weather condions
 #user input
-weather = input( "What's the weather like today? (sunny/rainy/cold):")# check weather and provide recommendations        
+weather = input("What's the weather like today? (sunny/rainy/cold): ")# check weather and provide recommendations        
 if weather == "sunny":
     print("Wear a t-shirt and sunglasses")
 elif weather == "rainy":
